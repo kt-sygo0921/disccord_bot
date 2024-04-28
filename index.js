@@ -16,12 +16,17 @@ client.on(Events.MessageCreate, async (message) => {
   // Check if the message is from the bot itself
   if (message.author.bot) return;
 
-  if(message.content === "すずちーん") {
-    message.channel.send( message.content + "はかわいい");
+  if(message.content.includes("すし")) {
+    message.channel.send("🍣");
+    return;
+  }
+
+  if(message.content.includes("すず")) {
+    message.channel.send("🔔");
     return;
   }
   // Send the message content back to the channel
-  message.channel.send(message.content);
+  // message.channel.send(message.content);
 });
 
 // ログインします
